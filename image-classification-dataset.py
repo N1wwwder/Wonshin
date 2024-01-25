@@ -18,13 +18,13 @@ mnist_train = torchvision.datasets.FashionMNIST(
     train = True,
     transform = trans,
     download = True,
-)
+)  # 这里的transform = trans是说明我们操作中要拿的是tensor而不是图片
 mnist_test = torchvision.datasets.FashionMNIST(
     root='./data',
     train = False,
     transform = trans,
     download = True,
-)
+)  # 这里是测试数据集，用来测试效果的好坏，因此其train对应的为False。
 
 def get_fashion_mnist_labels(labels):  #@save
     """返回Fashion-MNIST数据集的文本标签。"""
